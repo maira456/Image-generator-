@@ -36,9 +36,7 @@ export async function POST(req: Request) {
     })
 
     const result = await generateText({
-      model: google('gemini-2.0-flash-exp', {
-        useSearchGrounding: false,
-      }),
+      model: google('gemini-2.0-flash-exp-image-generation'),
       providerOptions: {
         google: {
           responseModalities: ['TEXT', 'IMAGE'],
